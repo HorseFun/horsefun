@@ -1,6 +1,6 @@
 import heroBg from "@/assets/hero-bg.jpeg";
-import tokenIcon from "@/assets/token-icon.png";
-import bnbIcon from "@/assets/icon-bnb.png";
+import tokenIcon from "@/assets/token-icon.jpg";
+import bnbIcon from "@/assets/icon-bnb.jpg";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Send, Copy, Languages } from "lucide-react";

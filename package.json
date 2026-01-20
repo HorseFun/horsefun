@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "echo 'Build output in dist/ directory. Cloudflare Pages will auto-deploy.'"
+    "deploy": "echo 'Build output in dist/ directory. Cloudflare Pages will auto-deploy.'",
+    "compress-images": "bash scripts/compress-images.sh"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
