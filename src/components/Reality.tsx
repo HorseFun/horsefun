@@ -38,6 +38,14 @@ const term1Items = [
 
 const term2Items = [
   {
+    title: "威胁打击伊朗 (Iran Strike Threat)",
+    desc: "公开威胁对伊朗发动「前所未有的打击」，称若伤害美国公民将让伊朗「从地球上消失」。",
+    enDesc: "Publicly threatened 'unprecedented strikes' against Iran, warning it would be 'wiped off the map' if any Americans are harmed.",
+    source: "BBC / Reuters",
+    link: "https://www.bbc.com/news/articles/ced961egp65o",
+    color: "bg-red-700/10 text-red-700 border-red-700/20"
+  },
+  {
     title: "入侵委内瑞拉 (Venezuela Invasion)",
     desc: "引用《外敌法案》入侵委内瑞拉，被指“总统绑架外国领导人”。",
     enDesc: "Invoked the Alien Enemies Act to invade Venezuela, described as 'presidential kidnapping'.",

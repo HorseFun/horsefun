@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Manifesto() {
+  const { t } = useLanguage();
   return (
     <section className="py-24 bg-black text-white relative border-b border-slate-900 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-900/50 via-black to-black"></div>
@@ -56,24 +58,24 @@ export default function Manifesto() {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-white/90">
-            这是一个自嘲、反叙事的 Meme 项目。
+            {t("manifesto.title")}
           </h2>
           
           <div className="w-16 h-1 bg-amber-500 mx-auto rounded-full my-8 opacity-80"></div>
 
           <p className="text-xl md:text-2xl font-light text-slate-300 leading-relaxed">
-            我们用讽刺解构宏大叙事，<br className="hidden md:block" />
-            用自知对抗幻觉。
+            {t("manifesto.line1")}<br className="hidden md:block" />
+            {t("manifesto.line2")}
           </p>
 
           <p className="text-xl md:text-2xl font-light text-slate-300 leading-relaxed">
-            我们站在旁边观察，<br className="hidden md:block" />
-            而不是站在台上承诺。
+            {t("manifesto.line3")}<br className="hidden md:block" />
+            {t("manifesto.line4")}
           </p>
 
           <div className="pt-8 flex flex-col items-center gap-4">
             <p className="text-sm text-slate-500 font-mono italic">
-              "We observe from the sidelines, rather than promising from the stage."
+              "{t("manifesto.quote")}"
             </p>
             <div className="flex gap-4 text-2xl opacity-60">
                👀 🍿 🎪 🤷‍♂️

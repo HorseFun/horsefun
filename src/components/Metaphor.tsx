@@ -3,35 +3,37 @@ import { motion } from "framer-motion";
 import iconHorse from "@/assets/icon-horse.jpeg";
 import iconFlatland from "@/assets/icon-flatland.jpeg";
 import iconChuan from "@/assets/icon-chuan.jpeg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
-const items = [
+export default function Metaphor() {
+  const { t } = useLanguage();
+  
+  const items = [
   {
     icon: iconHorse,
-    title: "一马 (The Horse)",
-    subtitle: "Capital & Speculation",
-    desc: "像脱缰的野马，充满兽性与投机冲动。",
-    enDesc: "Like a wild horse—unbridled capital and speculative impulse.",
+    title: t("metaphor.horse.title"),
+    subtitle: t("metaphor.horse.subtitle"),
+    desc: t("metaphor.horse.desc"),
+    enDesc: t("metaphor.horse.enDesc"),
     delay: 0
   },
   {
     icon: iconFlatland,
-    title: "平川 (Flatland)",
-    subtitle: "The Promised Future",
-    desc: "白皮书里的 WAGMI，看起来很平，走起来很坑。",
-    enDesc: "The 'We Are All Gonna Make It' promise in whitepapers. Looks flat, full of holes.",
+    title: t("metaphor.flatland.title"),
+    subtitle: t("metaphor.flatland.subtitle"),
+    desc: t("metaphor.flatland.desc"),
+    enDesc: t("metaphor.flatland.enDesc"),
     delay: 0.2
   },
   {
     icon: iconChuan,
-    title: "川 (The Chuan)",
-    subtitle: "Trumpian Terrain",
-    desc: "地势突变。被承诺的 “一马平川”，实际被 “川” 带进了沟里。",
-    enDesc: "Sudden terrain shift. The 'smooth path' is disrupted by the 'Chuan' (Trump) factor.",
+    title: t("metaphor.chuan.title"),
+    subtitle: t("metaphor.chuan.subtitle"),
+    desc: t("metaphor.chuan.desc"),
+    enDesc: t("metaphor.chuan.enDesc"),
     delay: 0.4
   }
 ];
-
-export default function Metaphor() {
   return (
     <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
