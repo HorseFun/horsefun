@@ -9,6 +9,22 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
   const { language, setLanguage, t } = useLanguage();
+  
+  const handleTwitterClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (language === "zh") {
+      toast.warning("账号已被封禁 🚫", {
+        description: "看来我们太真实了，连推特都看不下去了",
+        duration: 4000,
+      });
+    } else {
+      toast.warning("Account Suspended 🚫", {
+        description: "Too real for Twitter. Even X can't handle the truth.",
+        duration: 4000,
+      });
+    }
+  };
+  
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -89,12 +105,16 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-4 justify-center items-center">
-            <Button size="icon" variant="ghost" className="text-white hover:text-amber-400 hover:bg-white/10 w-12 h-12 rounded-full" asChild>
-              <a href="https://x.com/onehors2026" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
-                <svg viewBox="0 0 24 24" aria-hidden="true" className="w-6 h-6 fill-current">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
+            <Button 
+              size="icon" 
+              variant="ghost" 
+              className="text-white hover:text-amber-400 hover:bg-white/10 w-12 h-12 rounded-full"
+              onClick={handleTwitterClick}
+              aria-label="X (formerly Twitter)"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="w-6 h-6 fill-current">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </Button>
             {/* <Button size="icon" variant="ghost" className="text-white hover:text-amber-400 hover:bg-white/10 w-12 h-12 rounded-full" asChild>
               <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
